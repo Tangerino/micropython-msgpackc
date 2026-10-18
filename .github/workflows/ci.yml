@@ -1,0 +1,109 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - run: make lint
+
+  unix:
+    # Every unix configuration of tools/build-unix.sh, with the host tests.
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        flavour: [standard, float32, longlong, sanitize, coverage]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: astral-sh/setup-uv@v6
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libffi-dev pkg-config
+      - name: Install the 32-bit toolchain
+        if: matrix.flavour == 'longlong'
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt-get update
+          sudo apt-get install -y gcc-i686-linux-gnu patchelf libffi-dev:i386
+      - run: make setup
+      - run: tools/build-unix.sh ${{ matrix.flavour }}
+      - name: Tests
+        env:
+          MSGPACKC_FLAVOURS: ${{ matrix.flavour }}
+          ASAN_OPTIONS: detect_leaks=0:abort_on_error=1
+          UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+        run: .venv/bin/python -m pytest -v
+      - name: Coverage report
+        if: matrix.flavour == 'coverage'
+        run: |
+          cd build/unix-coverage/msgpackc
+          gcov -b modmsgpackc.gcda | grep -A4 "modmsgpackc.c'"
+      - uses: actions/upload-artifact@v4
+        if: matrix.flavour == 'coverage'
+        with:
+          name: coverage
+          path: build/unix-coverage/msgpackc/*.gcov
+
+  unix-minimal:
+    # The minimal variant (no floats, no OrderedDict...): checks that the
+    # module builds with the smallest MicroPython configuration.
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - run: make -C micropython/ports/unix submodules && make -C micropython/mpy-cross
+      - run: tools/build-unix.sh minimal
+      - run: build/unix-minimal/micropython -c "import msgpackc; print(msgpackc.loads(msgpackc.dumps([1, 'a', b'b', None])))"
+
+  esp32:
+    # Firmware for each chip family, built in Espressif's own image.
+    runs-on: ubuntu-24.04
+    container: espressif/idf:v5.5.2
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - ESP32_GENERIC
+          - ESP32_GENERIC SPIRAM
+          - ESP32_GENERIC_S3
+          - ESP32_GENERIC_C3
+          - ESP32_GENERIC_C6
+          - ESP32_GENERIC_P4
+          - ESP32_GENERIC_P4 PRE_REV3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Build
+        shell: bash
+        run: |
+          git config --global --add safe.directory '*'
+          . $IDF_PATH/export.sh
+          tools/build-esp32.sh ${{ matrix.target }}
+      - name: Name
+        id: name
+        shell: bash
+        run: echo "dir=$(echo '${{ matrix.target }}' | tr 'A-Z_ ' 'a-z--')" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: firmware-${{ steps.name.outputs.dir }}
+          path: |
+            build/${{ steps.name.outputs.dir }}/firmware.bin
+            build/${{ steps.name.outputs.dir }}/micropython.bin

@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["msgpackc_aio.py", "github:Tangerino/micropython-msgpackc/python/msgpackc_aio.py"],
+    ["umsgpack/__init__.py", "github:Tangerino/micropython-msgpackc/python/umsgpack/__init__.py"]
+  ],
+  "version": "1.0.0"
+}

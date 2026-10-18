@@ -1,0 +1,25 @@
+# Build output (unix port, firmware images, test results)
+build/
+
+# The repo-local ESP-IDF and Espressif toolchains (tools/setup-esp-idf.sh):
+# several GB, reinstalled by the script, never committed.
+tools/esp-idf/
+tools/espressif/
+
+# Flash backups of real boards and other local, private material.
+.private/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+
+# Test leftovers
+*.tmp

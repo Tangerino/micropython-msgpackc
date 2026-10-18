@@ -1,0 +1,14 @@
+# Optional: `pre-commit install` runs the same checks as `make lint` on each commit.
+repos:
+  - repo: local
+    hooks:
+      - id: uncrustify
+        name: uncrustify (MicroPython C style)
+        entry: .venv/bin/uncrustify -c micropython/tools/uncrustify.cfg -lC --check -q
+        language: system
+        files: ^cmodules/.*\.[ch]$
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.11.6
+    hooks:
+      - id: ruff
+      - id: ruff-format

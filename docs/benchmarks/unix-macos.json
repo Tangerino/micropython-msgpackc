@@ -1,0 +1,244 @@
+{
+ "label": "unix-macos",
+ "description": "Apple Silicon Mac (arm64), unix port, standard build (double precision floats)",
+ "platform": "darwin",
+ "host": "Darwin arm64",
+ "float": "double",
+ "date": "2026-10-18",
+ "results": [
+  {
+   "dumps_alloc": 64,
+   "loads_alloc": 0,
+   "dumps_us": 0.08551502227783203,
+   "loads_us": 0.02483987808227539,
+   "payload": "int",
+   "lib": "msgpackc",
+   "size": 1
+  },
+  {
+   "dumps_alloc": 608,
+   "loads_alloc": 224,
+   "dumps_us": 0.7695331573486328,
+   "loads_us": 0.5251598358154297,
+   "payload": "int",
+   "lib": "umsgpack",
+   "size": 1
+  },
+  {
+   "dumps_alloc": 64,
+   "loads_alloc": 0,
+   "dumps_us": 0.31730175018310547,
+   "loads_us": 0.061112403869628906,
+   "payload": "int",
+   "lib": "json",
+   "size": 2
+  },
+  {
+   "dumps_alloc": 96,
+   "loads_alloc": 256,
+   "dumps_us": 0.1649017333984375,
+   "loads_us": 0.8439483642578125,
+   "payload": "telemetry",
+   "lib": "msgpackc",
+   "size": 59
+  },
+  {
+   "dumps_alloc": 6112,
+   "loads_alloc": 1984,
+   "dumps_us": 9.34454345703125,
+   "loads_us": 8.436279296875,
+   "payload": "telemetry",
+   "lib": "umsgpack",
+   "size": 59
+  },
+  {
+   "dumps_alloc": 128,
+   "loads_alloc": 256,
+   "dumps_us": 1.197967529296875,
+   "loads_us": 12.881103515625,
+   "payload": "telemetry",
+   "lib": "json",
+   "size": 88
+  },
+  {
+   "dumps_alloc": 1216,
+   "loads_alloc": 5312,
+   "dumps_us": 2.6551971435546875,
+   "loads_us": 16.4091796875,
+   "payload": "telemetry x20",
+   "lib": "msgpackc",
+   "size": 1183
+  },
+  {
+   "dumps_alloc": 120096,
+   "loads_alloc": 38080,
+   "dumps_us": 196.3818359375,
+   "loads_us": 169.3857421875,
+   "payload": "telemetry x20",
+   "lib": "umsgpack",
+   "size": 1183
+  },
+  {
+   "dumps_alloc": 1856,
+   "loads_alloc": 5440,
+   "dumps_us": 20.48297119140625,
+   "loads_us": 63.818359375,
+   "payload": "telemetry x20",
+   "lib": "json",
+   "size": 1810
+  },
+  {
+   "dumps_alloc": 384,
+   "loads_alloc": 1984,
+   "dumps_us": 0.8921089172363281,
+   "loads_us": 4.39208984375,
+   "payload": "config",
+   "lib": "msgpackc",
+   "size": 348
+  },
+  {
+   "dumps_alloc": 47776,
+   "loads_alloc": 16576,
+   "dumps_us": 75.86328125,
+   "loads_us": 62.483154296875,
+   "payload": "config",
+   "lib": "umsgpack",
+   "size": 348
+  },
+  {
+   "dumps_alloc": 640,
+   "loads_alloc": 1888,
+   "dumps_us": 6.27783203125,
+   "loads_us": 29.231201171875,
+   "payload": "config",
+   "lib": "json",
+   "size": 589
+  },
+  {
+   "dumps_alloc": 384,
+   "loads_alloc": 832,
+   "dumps_us": 0.7624168395996094,
+   "loads_us": 0.5905570983886719,
+   "payload": "int list x100",
+   "lib": "msgpackc",
+   "size": 343
+  },
+  {
+   "dumps_alloc": 42912,
+   "loads_alloc": 20928,
+   "dumps_us": 72.222412109375,
+   "loads_us": 68.214599609375,
+   "payload": "int list x100",
+   "lib": "umsgpack",
+   "size": 343
+  },
+  {
+   "dumps_alloc": 768,
+   "loads_alloc": 1056,
+   "dumps_us": 4.4524383544921875,
+   "loads_us": 27.422119140625,
+   "payload": "int list x100",
+   "lib": "json",
+   "size": 723
+  },
+  {
+   "dumps_alloc": 960,
+   "loads_alloc": 4032,
+   "dumps_us": 1.4386672973632812,
+   "loads_us": 2.3654632568359375,
+   "payload": "float list x100",
+   "lib": "msgpackc",
+   "size": 903
+  },
+  {
+   "dumps_alloc": 44064,
+   "loads_alloc": 20928,
+   "dumps_us": 77.158203125,
+   "loads_us": 57.6240234375,
+   "payload": "float list x100",
+   "lib": "umsgpack",
+   "size": 903
+  },
+  {
+   "dumps_alloc": 1312,
+   "loads_alloc": 4256,
+   "dumps_us": 23.9736328125,
+   "loads_us": 57.012939453125,
+   "payload": "float list x100",
+   "lib": "json",
+   "size": 1278
+  },
+  {
+   "dumps_alloc": 448,
+   "loads_alloc": 3648,
+   "dumps_us": 0.7473716735839844,
+   "loads_us": 2.5431137084960938,
+   "payload": "str list x50",
+   "lib": "msgpackc",
+   "size": 393
+  },
+  {
+   "dumps_alloc": 23840,
+   "loads_alloc": 9216,
+   "dumps_us": 38.544921875,
+   "loads_us": 42.5108642578125,
+   "payload": "str list x50",
+   "lib": "umsgpack",
+   "size": 393
+  },
+  {
+   "dumps_alloc": 576,
+   "loads_alloc": 3744,
+   "dumps_us": 6.333740234375,
+   "loads_us": 96.603271484375,
+   "payload": "str list x50",
+   "lib": "json",
+   "size": 540
+  },
+  {
+   "dumps_alloc": 640,
+   "loads_alloc": 8032,
+   "dumps_us": 1.42523193359375,
+   "loads_us": 30.3985595703125,
+   "payload": "map x100",
+   "lib": "msgpackc",
+   "size": 603
+  },
+  {
+   "dumps_alloc": 91488,
+   "loads_alloc": 27968,
+   "dumps_us": 135.37451171875,
+   "loads_us": 158.49560546875,
+   "payload": "map x100",
+   "lib": "umsgpack",
+   "size": 603
+  },
+  {
+   "dumps_alloc": 1248,
+   "loads_alloc": 8480,
+   "dumps_us": 11.98095703125,
+   "loads_us": 147.010498046875,
+   "payload": "map x100",
+   "lib": "json",
+   "size": 1190
+  },
+  {
+   "dumps_alloc": 1088,
+   "loads_alloc": 1088,
+   "dumps_us": 1.0287284851074219,
+   "loads_us": 0.9754295349121094,
+   "payload": "bytes 1 KiB",
+   "lib": "msgpackc",
+   "size": 1027
+  },
+  {
+   "dumps_alloc": 2688,
+   "loads_alloc": 1376,
+   "dumps_us": 2.0302047729492188,
+   "loads_us": 1.7156295776367188,
+   "payload": "bytes 1 KiB",
+   "lib": "umsgpack",
+   "size": 1027
+  }
+ ]
+}

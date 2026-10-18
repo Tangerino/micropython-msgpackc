@@ -1,0 +1,7 @@
+{
+ "note": "micropython.bin of the standard firmware (tools/build-esp32.sh BOARD [VARIANT]) with and without the module (--without-msgpackc), MicroPython v1.29.0, ESP-IDF v5.5.2, 2026-10-18",
+ "sizes": [
+  {"target": "ESP32 (ESP32_GENERIC, Xtensa)", "with": 1741632, "without": 1729744, "text": 14311, "data": 16, "bss": 0},
+  {"target": "ESP32-P4 (ESP32_GENERIC_P4 PRE_REV3, RISC-V)", "with": 1645040, "without": 1630512, "text": 15183, "data": 16, "bss": 0}
+ ]
+}

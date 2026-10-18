@@ -1,0 +1,244 @@
+{
+ "label": "esp32-psram",
+ "description": "ESP32-PICO-V3-02 (ESP32 rev 3.0, Xtensa LX6, 240 MHz), heap in 2 MiB PSRAM, test firmware ESP32_GENERIC/SPIRAM",
+ "platform": "Generic ESP32 module with SPIRAM with ESP32 1.29.0",
+ "host": null,
+ "float": "single",
+ "date": "2026-10-18",
+ "results": [
+  {
+   "dumps_alloc": 32,
+   "loads_alloc": 0,
+   "dumps_us": 54.320312,
+   "loads_us": 11.659454,
+   "payload": "int",
+   "lib": "msgpackc",
+   "size": 1
+  },
+  {
+   "dumps_alloc": 304,
+   "loads_alloc": 112,
+   "dumps_us": 684.2539,
+   "loads_us": 482.65624,
+   "payload": "int",
+   "lib": "umsgpack",
+   "size": 1
+  },
+  {
+   "dumps_alloc": 32,
+   "loads_alloc": 0,
+   "dumps_us": 111.06543,
+   "loads_us": 16.479126,
+   "payload": "int",
+   "lib": "json",
+   "size": 2
+  },
+  {
+   "dumps_alloc": 80,
+   "loads_alloc": 160,
+   "dumps_us": 138.62988,
+   "loads_us": 279.01564,
+   "payload": "telemetry",
+   "lib": "msgpackc",
+   "size": 51
+  },
+  {
+   "dumps_alloc": 3120,
+   "loads_alloc": 1024,
+   "dumps_us": 8575.844,
+   "loads_us": 6195.8592,
+   "payload": "telemetry",
+   "lib": "umsgpack",
+   "size": 51
+  },
+  {
+   "dumps_alloc": 112,
+   "loads_alloc": 160,
+   "dumps_us": 928.7617,
+   "loads_us": 555.7988,
+   "payload": "telemetry",
+   "lib": "json",
+   "size": 88
+  },
+  {
+   "dumps_alloc": 1040,
+   "loads_alloc": 3296,
+   "dumps_us": 2059.1562,
+   "loads_us": 5829.1408,
+   "payload": "telemetry x20",
+   "lib": "msgpackc",
+   "size": 1023
+  },
+  {
+   "dumps_alloc": 60928,
+   "loads_alloc": 19680,
+   "dumps_us": 169922.0,
+   "loads_us": 118470.0,
+   "payload": "telemetry x20",
+   "lib": "umsgpack",
+   "size": 1023
+  },
+  {
+   "dumps_alloc": 1840,
+   "loads_alloc": 3360,
+   "dumps_us": 12967.0,
+   "loads_us": 11061.469,
+   "payload": "telemetry x20",
+   "lib": "json",
+   "size": 1810
+  },
+  {
+   "dumps_alloc": 368,
+   "loads_alloc": 1008,
+   "dumps_us": 739.41408,
+   "loads_us": 1821.0078,
+   "payload": "config",
+   "lib": "msgpackc",
+   "size": 336
+  },
+  {
+   "dumps_alloc": 24224,
+   "loads_alloc": 8304,
+   "dumps_us": 73934.5,
+   "loads_us": 53747.5,
+   "payload": "config",
+   "lib": "umsgpack",
+   "size": 336
+  },
+  {
+   "dumps_alloc": 608,
+   "loads_alloc": 960,
+   "dumps_us": 3142.9218,
+   "loads_us": 2740.3124,
+   "payload": "config",
+   "lib": "json",
+   "size": 589
+  },
+  {
+   "dumps_alloc": 368,
+   "loads_alloc": 416,
+   "dumps_us": 922.71868,
+   "loads_us": 709.09376,
+   "payload": "int list x100",
+   "lib": "msgpackc",
+   "size": 343
+  },
+  {
+   "dumps_alloc": 21808,
+   "loads_alloc": 10464,
+   "dumps_us": 66852.0,
+   "loads_us": 77489.0,
+   "payload": "int list x100",
+   "lib": "umsgpack",
+   "size": 343
+  },
+  {
+   "dumps_alloc": 752,
+   "loads_alloc": 528,
+   "dumps_us": 2434.5624,
+   "loads_us": 2247.5468,
+   "payload": "int list x100",
+   "lib": "json",
+   "size": 723
+  },
+  {
+   "dumps_alloc": 528,
+   "loads_alloc": 2016,
+   "dumps_us": 1171.5078,
+   "loads_us": 1925.2812,
+   "payload": "float list x100",
+   "lib": "msgpackc",
+   "size": 503
+  },
+  {
+   "dumps_alloc": 22144,
+   "loads_alloc": 10464,
+   "dumps_us": 70760.25,
+   "loads_us": 52202.5,
+   "payload": "float list x100",
+   "lib": "umsgpack",
+   "size": 503
+  },
+  {
+   "dumps_alloc": 896,
+   "loads_alloc": 2128,
+   "dumps_us": 14703.0632,
+   "loads_us": 4616.5,
+   "payload": "float list x100",
+   "lib": "json",
+   "size": 870
+  },
+  {
+   "dumps_alloc": 416,
+   "loads_alloc": 1824,
+   "dumps_us": 874.71868,
+   "loads_us": 1977.7266,
+   "payload": "str list x50",
+   "lib": "msgpackc",
+   "size": 393
+  },
+  {
+   "dumps_alloc": 12304,
+   "loads_alloc": 4608,
+   "dumps_us": 33353.0,
+   "loads_us": 27832.75,
+   "payload": "str list x50",
+   "lib": "umsgpack",
+   "size": 393
+  },
+  {
+   "dumps_alloc": 560,
+   "loads_alloc": 1872,
+   "dumps_us": 2687.7032,
+   "loads_us": 6066.0,
+   "payload": "str list x50",
+   "lib": "json",
+   "size": 540
+  },
+  {
+   "dumps_alloc": 624,
+   "loads_alloc": 4016,
+   "dumps_us": 2012.7969,
+   "loads_us": 12963.0,
+   "payload": "map x100",
+   "lib": "msgpackc",
+   "size": 603
+  },
+  {
+   "dumps_alloc": 46352,
+   "loads_alloc": 13984,
+   "dumps_us": 131650.0,
+   "loads_us": 103697.25,
+   "payload": "map x100",
+   "lib": "umsgpack",
+   "size": 603
+  },
+  {
+   "dumps_alloc": 1216,
+   "loads_alloc": 4240,
+   "dumps_us": 5666.2656,
+   "loads_us": 18515.688,
+   "payload": "map x100",
+   "lib": "json",
+   "size": 1190
+  },
+  {
+   "dumps_alloc": 1056,
+   "loads_alloc": 1056,
+   "dumps_us": 2712.8124,
+   "loads_us": 2239.8906,
+   "payload": "bytes 1 KiB",
+   "lib": "msgpackc",
+   "size": 1027
+  },
+  {
+   "dumps_alloc": 2384,
+   "loads_alloc": 1200,
+   "dumps_us": 5179.375,
+   "loads_us": 2788.2812,
+   "payload": "bytes 1 KiB",
+   "lib": "umsgpack",
+   "size": 1027
+  }
+ ]
+}

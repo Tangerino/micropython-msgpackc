@@ -1,0 +1,10 @@
+# Clang sanitizer ignore list for the unix sanitizer build (tools/build-unix.sh).
+#
+# The conservative garbage collector scans the whole C stack, red zones
+# included. py/gc.c marks gc_get_ptr() with no_sanitize_address, but behind
+# "#if __GNUC__ > 4", which is false for clang (it defines __GNUC__ as 4), so
+# with clang the scan is reported as a stack-buffer-overflow. gcc is not
+# affected. These two functions only read stack words; nothing of msgpackc is
+# excluded.
+fun:gc_get_ptr
+fun:gc_collect_root

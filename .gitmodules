@@ -1,0 +1,9 @@
+[submodule "micropython"]
+	path = micropython
+	url = https://github.com/micropython/micropython.git
+[submodule "third_party/micropython-msgpack"]
+	path = third_party/micropython-msgpack
+	url = https://github.com/peterhinch/micropython-msgpack.git
+[submodule "third_party/msgpack-test-suite"]
+	path = third_party/msgpack-test-suite
+	url = https://github.com/kawanet/msgpack-test-suite.git

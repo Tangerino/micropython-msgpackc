@@ -1,0 +1,54 @@
+ok c0
+ok c2
+ok c3
+ok 00
+ok 7f
+ok ff
+ok e0
+ok cc 00
+ok cc ff
+ok cd ffff
+ok ce ffffffff
+ok cf ffffffffffffffff
+ok cf 0000000000000001
+ok d0 80
+ok d0 7f
+ok d1 8000
+ok d2 80000000
+ok d3 8000000000000000
+ok d3 0000000000000005
+ok ca 3fc00000
+ok cb c000000000000000
+inf -inf
+True
+ok a0
+ok a3 616263
+ok d9 03 616263
+ok da 0003 616263
+ok db 00000003 616263
+ok a2 c3a9
+ok a4 f09f9880
+ok c4 00
+ok c4 02 00ff
+ok c5 0002 00ff
+ok c6 00000002 00ff
+ok 90
+ok 93 010203
+ok dc 0002 0102
+ok dd 00000002 0102
+ok 80
+ok 81 a161 01
+ok de 0001 a161 01
+ok df 00000001 a161 01
+ok 82 01 c0 a162 92 c2 c3
+ok 92 01 92 02 03
+ok 92 01 92 02 03
+ok a2 fffe
+OrderedDict ['c', 'a', 'b']
+{(1, (2,)): 'v'}
+[1, 2]
+[1, 2]
+1
+True True True
+True True
+True

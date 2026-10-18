@@ -1,0 +1,28 @@
+RuntimeError maximum recursion depth exceeded
+RuntimeError maximum recursion depth exceeded
+RuntimeError maximum recursion depth exceeded
+True
+RuntimeError maximum recursion depth exceeded
+returned [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[None]]]]]]]]]]]]]]
+True
+RuntimeError maximum recursion depth exceeded
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+['InsufficientDataException']
+[('InsufficientDataException', 89), ('NoneType', 1), ('ReservedCodeException', 1), ('bool', 2), ('dict', 1), ('int', 160), ('list', 1), ('str', 1)]
+RuntimeError container changed size during packing
+RuntimeError container changed size during packing
+RuntimeError buffer changed during unpacking
+returned ['enlarged', 'after', [1, 2, 3]]
+UnhashableKeyException "{1: 2}"
+UnhashableKeyException "(1, {})"

@@ -1,0 +1,64 @@
+ok None
+ok False
+ok True
+ok 0
+ok 1
+ok 127
+ok 128
+ok 255
+ok 256
+ok 65535
+ok 65536
+ok 2147483647
+ok 2147483648
+ok 4294967295
+ok 4294967296
+ok 9223372036854775807
+ok 9223372036854775808
+ok 18446744073709551615
+ok -1
+ok -32
+ok -33
+ok -128
+ok -129
+ok -32768
+ok -32769
+ok -2147483648
+ok -2147483649
+ok -9223372036854775808
+ok 1.5
+ok 1.5
+ok -0.0
+ok inf
+ok -inf
+True
+True
+ok ''
+ok 'a'
+ok 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+ok 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+ok 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ok 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ok 'é'
+ok '€'
+ok '😀'
+ok 'éééééééééééééééé'
+ok b''
+ok b'\x00\xff'
+ok b'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ok b'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ok bytearray(b'\x01\x02')
+ok []
+ok [1, 2, 3]
+ok (1, 2, 3)
+ok [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+ok [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+ok {}
+ok {'a': 1}
+ok {1: None}
+True 31
+True 35
+ok [1, [2, [3, {}]]]
+ok {'k': [True, None, {'x': b'\x00'}]}
+41
+True

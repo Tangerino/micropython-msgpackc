@@ -1,0 +1,3 @@
+no leak: True
+dumps allocates <= 2x the result: True
+loads allocates < 1 KiB: True

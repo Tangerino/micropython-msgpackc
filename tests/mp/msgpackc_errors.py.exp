@@ -1,0 +1,39 @@
+True
+InsufficientDataException True True
+InvalidStringException True True
+ReservedCodeException True True
+UnhashableKeyException True True
+DuplicateKeyException True True
+UnsupportedTypeException <class 'set'>
+UnsupportedTypeException <class 'object'>
+UnsupportedTypeException <class 'memoryview'>
+UnsupportedTypeException <class 'complex'>
+UnsupportedTypeException huge unsigned int
+UnsupportedTypeException huge signed int
+ValueError invalid float precision
+returned b'\x01'
+TypeError function missing 1 required positional arguments
+TypeError function takes 1 positional arguments but 2 were given
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+ReservedCodeException got 0xc1
+ReservedCodeException got 0xc1
+InvalidStringException unpacked string is invalid utf-8
+DuplicateKeyException "a" (<class 'str'>)
+DuplicateKeyException "1" (<class 'int'>)
+UnhashableKeyException "{}"
+UnhashableKeyException "({},)"
+UnsupportedTypeException ext_type: 0x7F
+UnsupportedTypeException ext_type: 0x-80
+TypeError Need 'bytes' or 'bytearray'
+TypeError Need 'bytes' or 'bytearray'
+TypeError Need 'bytes' or 'bytearray'
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+InsufficientDataException 
+ValueError Ext type value 1180591620717411303424 is out of range of -128 to 127
+caught as UnpackException
+caught as PackException

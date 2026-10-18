@@ -1,0 +1,17 @@
+True
+True
+100
+InsufficientDataException 
+ValueError read() returned too much data
+ok
+ok
+RuntimeError container changed size during packing
+RuntimeError container changed size during packing
+[98]
+TypeError _msgpackc_ext registry damaged
+[] [] 1
+True
+TypeError unsupported type for __neg__: 'Unpacker'
+TypeError function takes 0 positional arguments but 1 were given
+TypeError object with buffer protocol required
+ValueError Unpacker buffer full

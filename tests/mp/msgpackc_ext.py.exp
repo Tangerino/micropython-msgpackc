@@ -1,0 +1,29 @@
+0 b'\xc7\x00\x10' 3 Blob 0
+1 b'\xd4\x10\x00' 3 Blob 1
+2 b'\xd5\x10\x00\x01' 4 Blob 2
+3 b'\xc7\x03\x10\x00' 6 Blob 3
+4 b'\xd6\x10\x00\x01' 6 Blob 4
+8 b'\xd7\x10\x00\x01' 10 Blob 8
+15 b'\xc7\x0f\x10\x00' 18 Blob 15
+16 b'\xd8\x10\x00\x01' 18 Blob 16
+17 b'\xc7\x11\x10\x00' 20 Blob 17
+255 b'\xc7\xff\x10\x00' 258 Blob 255
+256 b'\xc8\x01\x00\x10' 260 Blob 256
+300 b'\xc8\x01,\x10' 304 Blob 300
+b'\xd4\xfb\x01'
+b'\xd5\x11\xff\xfd' Base -3
+[1, (2+3j)]
+10 18
+b'\xc7\x03R\x92\x01\x02' [(1, 2), [3]]
+[[('custom_option', 7), ('use_tuple', True)]]
+[-5, 16, 17, 18, 80, 82]
+16 80
+ValueError Ext type 16 already registered with class <class 'Blob'>
+ValueError Class <class 'Blob'> already registered with Ext type 19
+ValueError Ext type value 128 is out of range of -128 to 127
+ValueError Ext type value -129 is out of range of -128 to 127
+TypeError Ext type is not type integer
+UnsupportedTypeException <class 'NoMethods'>
+NotImplementedError Ext class <class 'NoMethods'> lacks unpackb()
+NotImplementedError Class <class 'bytearray'> invalid packb()
+UnsupportedTypeException ext_type: 0x15

@@ -17,6 +17,13 @@ as it is. No previous experience with MicroPython builds is needed.
 > MicroPython firmware: you cannot just copy a file to the board. This repo
 > makes that build a few commands long.
 
+> **Shortcut for ESP32 boards:** each
+> [release](https://github.com/Tangerino/micropython-msgpackc/releases/latest)
+> has ready-made firmware for ESP32 (with and without PSRAM), ESP32-S3, C3,
+> C6 and P4, with the `esptool.py` commands to write them. If your board is
+> one of these and you do not need to change anything, you can skip this
+> guide.
+
 ## 1. What you need
 
 **A computer** with one of:

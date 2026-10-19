@@ -1,5 +1,11 @@
 # msgpackc — fast MessagePack for MicroPython, in C
 
+[![CI](https://github.com/Tangerino/micropython-msgpackc/actions/workflows/ci.yml/badge.svg)](https://github.com/Tangerino/micropython-msgpackc/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/Tangerino/micropython-msgpackc)](https://github.com/Tangerino/micropython-msgpackc/releases/latest)
+[![MicroPython](https://img.shields.io/badge/MicroPython-v1.29-2b2728)](https://micropython.org)
+[![ESP32 | S3 | C3 | C6 | P4](https://img.shields.io/badge/ESP32-S3%20%7C%20C3%20%7C%20C6%20%7C%20P4-e7352c)](https://github.com/Tangerino/micropython-msgpackc/releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 `msgpackc` is a [MessagePack](https://msgpack.org) serializer for
 [MicroPython](https://micropython.org), written in C as a user module. It is
 a drop-in alternative to Peter Hinch's excellent pure-Python
@@ -52,6 +58,12 @@ Time to pack and unpack a list of 20 telemetry records (1 KiB), and heap allocat
 - About 12 KiB of flash (15 KiB on RISC-V chips), no RAM reserved, no configuration.
 
 ## Getting started
+
+**Just want to try it on an ESP32?** Download a ready-made firmware (ESP32,
+ESP32 with PSRAM, S3, C3, C6, P4) from the
+[latest release](https://github.com/Tangerino/micropython-msgpackc/releases/latest)
+and write it with `esptool.py`: no compiler needed. The release page tells
+which file and address to use for your chip.
 
 **Never built MicroPython?** Follow [docs/INSTALL.md](docs/INSTALL.md): it
 goes step by step from a fresh computer to a board running `msgpackc`. In

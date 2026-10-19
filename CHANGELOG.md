@@ -19,3 +19,5 @@ First release.
 - Nesting limited to 32 levels (`MSGPACKC_MAX_DEPTH`).
 - Build, flash, test and benchmark tooling for the unix port and ESP32
   boards, with a repo-local ESP-IDF v5.5.2.
+- Ready-made firmware in each GitHub release, built by CI
+  (`.github/workflows/release.yml`).

@@ -12,10 +12,10 @@ jobs:
   lint:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v10
       - run: uv sync
       - run: make lint
 
@@ -27,10 +27,10 @@ jobs:
       matrix:
         flavour: [standard, float32, longlong, sanitize, coverage]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v10
       - name: Install build dependencies
         run: |
           sudo apt-get update
@@ -54,7 +54,7 @@ jobs:
         run: |
           cd build/unix-coverage/msgpackc
           gcov -b modmsgpackc.gcda | grep -A4 "modmsgpackc.c'"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: matrix.flavour == 'coverage'
         with:
           name: coverage
@@ -65,7 +65,7 @@ jobs:
     # module builds with the smallest MicroPython configuration.
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
       - run: make -C micropython/ports/unix submodules && make -C micropython/mpy-cross
@@ -88,7 +88,7 @@ jobs:
           - ESP32_GENERIC_P4
           - ESP32_GENERIC_P4 PRE_REV3
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
       - name: Build
@@ -101,7 +101,7 @@ jobs:
         id: name
         shell: bash
         run: echo "dir=$(echo '${{ matrix.target }}' | tr 'A-Z_ ' 'a-z--')" >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: firmware-${{ steps.name.outputs.dir }}
           path: |

@@ -25,7 +25,7 @@ jobs:
           - { target: "ESP32_GENERIC_P4", name: "ESP32_GENERIC_P4" }
           - { target: "ESP32_GENERIC_P4 PRE_REV3", name: "ESP32_GENERIC_P4-PRE_REV3" }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
       - name: Build
@@ -41,7 +41,7 @@ jobs:
           mp=$(tools/release-notes.sh --mp-version)
           mkdir dist
           cp "build/$dir/firmware.bin" "dist/${{ matrix.name }}-$mp-msgpackc-${GITHUB_REF_NAME#v}.bin"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: firmware-${{ matrix.name }}
           path: dist/*.bin
@@ -50,10 +50,10 @@ jobs:
     needs: firmware
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           path: dist
           merge-multiple: true
